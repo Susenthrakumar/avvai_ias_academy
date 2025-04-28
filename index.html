@@ -1,0 +1,2931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avvai IAS Academy</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <!-- Style Sheet-->
+    <link href="styles.css" rel="stylesheet">
+    
+    <style>
+
+    </style>
+</head>
+<body>
+<!-- Navigation --> 
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="Avvai IAS Academy" height="50">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#courses">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#test-series">Test Series</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+        <!-- Close button (X) for mobile menu -->
+        <button class="btn-close btn-close-white d-lg-none" id="closeMenuBtn" aria-label="Close menu"></button>
+      </div>
+    </div>
+  </nav>
+  
+  <style>
+  /* Styles for the close button */
+  #closeMenuBtn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: none;
+  }
+  
+  /* Show the close button when menu is expanded */
+  .navbar-collapse.show #closeMenuBtn {
+    display: block;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 991.98px) {
+    .navbar-collapse {
+      background: linear-gradient(135deg, #2b5876, #4e4376);
+      padding: 15px;
+      border-radius: 0 0 10px 10px;
+      position: relative;
+      padding-top: 40px; /* Make room for close button */
+    }
+  }
+  </style>
+  
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get all navbar links
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    // Get the navbar collapse element
+    const navbarCollapse = document.getElementById('navbarNav');
+    
+    // Get the close button
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+    
+    // Function to close the menu
+    function closeMenu() {
+      if (window.getComputedStyle(navbarCollapse).display !== 'none') {
+        // Create a Bootstrap collapse instance and hide it
+        const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+        bsCollapse.hide();
+      }
+    }
+    
+    // Add click event listener to each link
+    navLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+    
+    // Add click event listener to the close button
+    closeMenuBtn.addEventListener('click', closeMenu);
+  });
+  </script>
+<!-- Hero Section with Dynamic Elements -->
+<section id="home" class="hero">
+    <!-- SVG Background Pattern -->
+    <div class="svg-background">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 1920 1080">
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#2b5876" />
+                    <stop offset="100%" stop-color="#4e4376" />
+                </linearGradient>
+                <pattern id="pattern" width="70" height="70" patternUnits="userSpaceOnUse">
+                    <path d="M17.5,0 L35,30 L17.5,60 L0,30 Z" fill="rgba(255,255,255,0.03)" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#gradient)" />
+            <rect width="100%" height="100%" fill="url(#pattern)" />
+            <!-- Abstract shapes with animation classes -->
+            <circle class="floating-circle" cx="10%" cy="20%" r="80" fill="rgba(255,255,255,0.05)" />
+            <circle class="floating-circle-reverse" cx="90%" cy="60%" r="120" fill="rgba(255,255,255,0.03)" />
+            <path class="wave-animation" d="M0,250 Q960,150 1920,350 V1080 H0 Z" fill="rgba(255,255,255,0.02)" />
+        </svg>
+    </div>
+    
+    <!-- Floating particles for dynamic background -->
+    <div class="particles">
+        <div class="particle particle1"></div>
+        <div class="particle particle2"></div>
+        <div class="particle particle3"></div>
+        <div class="particle particle4"></div>
+        <div class="particle particle5"></div>
+        <div class="particle particle6"></div>
+        <div class="particle particle7"></div>
+        <div class="particle particle8"></div>
+    </div>
+
+    <div class="container position-relative">
+        <div class="row align-items-center">
+            <div class="col-lg-6 hero-content" data-aos="fade-right" data-aos-duration="1000">
+                <h1>
+                    <span class="animated-text">Excellence</span> in
+                    <span class="highlight-text">Civil Services</span> Preparation
+                </h1>
+                <p class="typewriter" style="margin-bottom: 0; margin-left: 0%;">Premier coaching institute specializing in TNPSC and SI Exams</p>
+                <p class="typewriter typewriter-delayed" style="margin-top: 0; margin-left: 0%; ">Exceptional track record and experienced mentors</p>                
+                <div class="d-flex flex-wrap gap-3 justify-content-start justify-content-md-start mt-4">
+                    <a href="#courses" class="btn btn-secondary pulse-animation">Explore Courses</a>
+                    <a href="#contact" class="btn btn-primary glow-animation">Join Now</a>
+                </div>
+                <div class="achievements mt-5">
+                    <div class="row g-3">
+                        <div class="col-4">
+                            <div class="achievement-item count-up">
+                                <h3 class="counter" data-target="95">0</h3><span>%</span>
+                                <p>Success Rate</p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="achievement-item count-up">
+                                <h3 class="counter" data-target="500">0</h3><span>+</span>
+                                <p>Selections</p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="achievement-item count-up">
+                                <h3 class="counter" data-target="10">0</h3><span>+</span>
+                                <p>Years</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 hero-image" data-aos="fade-left" data-aos-duration="1000">
+                <div class="image-container">
+                    <img src="images/about.png" alt="Students studying for civil services" class="img-fluid rounded shadow" style="margin-top: 30px;">
+                    
+
+                    
+                    <div class="success-stories">
+                        <div class="success-story slide-in">
+                            <div class="avatar">
+                                <img src="images/about.png" alt="Success student" class="rounded-circle">
+                            </div>
+                            <div class="content">
+                                <p>Ranked #1 in TNPSC Group 1</p>
+                            </div>
+                        </div>
+                        <div class="success-story slide-in delay-1">
+                            <div class="avatar">
+                                <img src="images/about.png" alt="Success student" class="rounded-circle">
+                            </div>
+                            <div class="content">
+                                <p>Top 10 Ranks in SI Exam</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="floating-badge bounce-animation" style="margin-top: 30px;">
+                    <span>TNPSC & SI</span>
+                    <span>Coaching Experts</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Animated scroll indicator -->
+    <div class="scroll-indicator">
+        <div class="mouse">
+            <div class="wheel"></div>
+        </div>
+        <p>Scroll to explore</p>
+    </div>
+</section>
+<script>
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+  </script>
+  
+<script>
+    // JavaScript for Dynamic Animations and Counters
+
+// Wait for the DOM to load
+document.addEventListener('DOMContentLoaded', function() {
+    // Counter Animation
+    const counters = document.querySelectorAll('.counter');
+    
+    counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const duration = 2000; // duration in milliseconds
+        const interval = 50; // update interval in milliseconds
+        const step = target / (duration / interval);
+        let current = 0;
+        
+        const updateCounter = () => {
+            current += step;
+            if (current > target) {
+                current = target;
+                clearInterval(counterInterval);
+            }
+            counter.textContent = Math.floor(current);
+        };
+        
+        const counterInterval = setInterval(updateCounter, interval);
+    });
+    
+    // Intersection Observer for triggering animations when elements come into view
+    const observerOptions = {
+        threshold: 0.1
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add animation classes when element comes into view
+                if (entry.target.classList.contains('count-up')) {
+                    entry.target.classList.add('animate');
+                }
+                
+                // Stop observing after triggering
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    // Observe all achievement items
+    document.querySelectorAll('.achievement-item').forEach(item => {
+        observer.observe(item);
+    });
+    
+    // Dynamic background particles
+    const createParticles = (count) => {
+        const particles = document.createElement('div');
+        particles.className = 'dynamic-particles';
+        
+        for (let i = 0; i < count; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'dynamic-particle';
+            
+            // Random position
+            const posX = Math.random() * 100;
+            const posY = Math.random() * 100;
+            
+            // Random size
+            const size = Math.random() * 8 + 3;
+            
+            // Random animation duration
+            const duration = Math.random() * 8 + 4;
+            
+            // Set particle styles
+            particle.style.left = `${posX}%`;
+            particle.style.top = `${posY}%`;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.animationDuration = `${duration}s`;
+            
+            particles.appendChild(particle);
+        }
+        
+        document.querySelector('.hero').appendChild(particles);
+    };
+    
+    // Create additional dynamic particles
+    createParticles(15);
+    
+    // Parallax effect for hero section
+    const hero = document.querySelector('.hero');
+    const particles = document.querySelectorAll('.particle');
+    const heroContent = document.querySelector('.hero-content');
+    
+    window.addEventListener('mousemove', (e) => {
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+        
+        particles.forEach(particle => {
+            const speed = 20;
+            const translateX = (x - 0.5) * speed;
+            const translateY = (y - 0.5) * speed;
+            
+            particle.style.transform = `translate(${translateX}px, ${translateY}px)`;
+        });
+        
+        // Subtle content movement
+        heroContent.style.transform = `translate(${(x - 0.5) * 10}px, ${(y - 0.5) * 10}px)`;
+    });
+    
+    // Add animated class to success stories at intervals
+    const successStories = document.querySelectorAll('.success-story');
+    let index = 0;
+    
+    // Initial display
+    if (successStories.length > 0) {
+        successStories[0].classList.add('visible');
+    }
+    
+    // Cycle through success stories
+    setInterval(() => {
+        successStories.forEach(story => {
+            story.classList.remove('visible');
+        });
+        
+        index = (index + 1) % successStories.length;
+        successStories[index].classList.add('visible');
+    }, 5000);
+    
+    // Smooth scroll for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+
+// Additional CSS to be injected for dynamic particles
+const dynamicStyle = document.createElement('style');
+dynamicStyle.innerHTML = `
+    .dynamic-particles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+    }
+    
+    .dynamic-particle {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+        animation: floatRandom 10s ease-in-out infinite;
+    }
+    
+    @keyframes floatRandom {
+        0%, 100% { transform: translate(0, 0); }
+        25% { transform: translate(10px, -20px); }
+        50% { transform: translate(20px, 10px); }
+        75% { transform: translate(-10px, 20px); }
+    }
+    
+    .success-story {
+        opacity: 0;
+        transform: translateX(-50px);
+        transition: all 0.5s ease;
+    }
+    
+    .success-story.visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+`;
+document.head.appendChild(dynamicStyle);
+</script>
+
+<!--
+ Banner Selection Section 
+<section id="banner-selection" class="py-5">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Choose Your Path</h2>
+            <p>Select the program that matches your career goals</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="banner-card" onclick="selectBanner(this, 'tnpsc')">
+                    <div class="banner-image">
+                        <img src="images/tn.jpeg" alt="TNPSC Preparation">
+                        <div class="banner-overlay">
+                            <h4>TNPSC Preparation</h4>
+                            <p>Comprehensive coaching for all TNPSC groups with specialized focus on Tamil Nadu syllabus</p>
+                            <div class="selection-check"><i class="fas fa-check"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="banner-card" onclick="selectBanner(this, 'si')">
+                    <div class="banner-image">
+                        <img src="images/poli.jpg" alt="SI Exam Preparation">
+                        <div class="banner-overlay">
+                            <h4>SI Exam Preparation</h4>
+                            <p>Specialized training for Sub-Inspector examinations with focus on both written and physical tests</p>
+                            <div class="selection-check"><i class="fas fa-check"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                <div class="banner-card" onclick="selectBanner(this, 'weekend')">
+                    <div class="banner-image">
+                        <img src="/api/placeholder/400/250" alt="Weekend Batch">
+                        <div class="banner-overlay">
+                            <h4>Weekend Batch</h4>
+                            <p>Specially designed for working professionals who cannot attend regular weekday classes</p>
+                            <div class="selection-check"><i class="fas fa-check"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                <div class="banner-card" onclick="selectBanner(this, 'online')">
+                    <div class="banner-image">
+                        <img src="/api/placeholder/400/250" alt="Online Learning">
+                        <div class="banner-overlay">
+                            <h4>Online Learning</h4>
+                            <p>Distance is no barrier to quality education with our flexible online program</p>
+                            <div class="selection-check"><i class="fas fa-check"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="500">
+                <div class="banner-card" onclick="selectBanner(this, 'group1')">
+                    <div class="banner-image">
+                        <img src="/api/placeholder/400/250" alt="Group 1 Special">
+                        <div class="banner-overlay">
+                            <h4>Group 1 Special</h4>
+                            <p>Intensive coaching focusing specifically on Group 1 examination preparation</p>
+                            <div class="selection-check"><i class="fas fa-check"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="600">
+                <div class="banner-card" onclick="selectBanner(this, 'crash')">
+                    <div class="banner-image">
+                        <img src="/api/placeholder/400/250" alt="Crash Course">
+                        <div class="banner-overlay">
+                            <h4>Crash Course</h4>
+                            <p>Short-term intensive program for last-minute preparation before examinations</p>
+                            <div class="selection-check"><i class="fas fa-check"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Banner Selection Styles */
+#banner-selection {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.banner-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
+}
+
+.banner-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.banner-card.selected {
+    border: 3px solid var(--secondary);
+    box-shadow: 0 20px 40px rgba(243, 156, 18, 0.4);
+    transform: translateY(-10px) scale(1.03);
+}
+
+.banner-image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    transition: transform 0.8s ease;
+}
+
+.banner-card:hover .banner-image img {
+    transform: scale(1.1);
+}
+
+.banner-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(44, 62, 80, 0.95), rgba(44, 62, 80, 0.7), transparent);
+    padding: 25px;
+    color: #fff;
+    transform: translateY(60px);
+    transition: all 0.4s ease;
+}
+
+.banner-card:hover .banner-overlay,
+.banner-card.selected .banner-overlay {
+    transform: translateY(0);
+}
+
+.banner-overlay h4 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.banner-overlay p {
+    font-size: 0.9rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease 0.1s;
+    margin-bottom: 5px;
+}
+
+.banner-card:hover .banner-overlay p,
+.banner-card.selected .banner-overlay p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.selection-check {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.banner-card.selected .selection-check {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Glowing effect for selected cards */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(243, 156, 18, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(243, 156, 18, 0);
+    }
+}
+
+.banner-card.selected {
+    animation: pulse 2s infinite;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .banner-overlay {
+        transform: translateY(0);
+        padding: 15px;
+    }
+    
+    .banner-overlay p {
+        opacity: 1;
+        transform: translateY(0);
+        font-size: 0.8rem;
+    }
+    
+    .banner-overlay h4 {
+        font-size: 1.1rem;
+    }
+    
+    .banner-image {
+        height: 200px;
+    }
+}
+</style>
+
+<script>
+// Banner selection functionality
+let selectedBanner = null;
+
+function selectBanner(element, programType) {
+    // Remove selected class from all banners
+    document.querySelectorAll('.banner-card').forEach(card => {
+        card.classList.remove('selected');
+    });
+    
+    // Add selected class to clicked banner
+    element.classList.add('selected');
+    selectedBanner = programType;
+    
+    // Enable the proceed button
+    const proceedBtn = document.getElementById('proceedBtn');
+    proceedBtn.classList.remove('disabled');
+    
+    // Add ripple effect on selection
+    createRippleEffect(element);
+}
+
+function createRippleEffect(element) {
+    const ripple = document.createElement('div');
+    ripple.className = 'ripple';
+    
+    const rect = element.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+    
+    ripple.style.width = ripple.style.height = `${size}px`;
+    ripple.style.left = `${event.clientX - rect.left - size/2}px`;
+    ripple.style.top = `${event.clientY - rect.top - size/2}px`;
+    
+    element.appendChild(ripple);
+    
+    setTimeout(() => {
+        ripple.remove();
+    }, 600);
+}
+
+// Add this to your existing styles
+document.head.insertAdjacentHTML('beforeend', `
+<style>
+.ripple {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+</style>
+`);
+
+// Handle proceed button click
+document.getElementById('proceedBtn').addEventListener('click', function() {
+    if (!this.classList.contains('disabled')) {
+        // You can redirect or show more information based on the selection
+        alert(`You've selected the ${selectedBanner} program. Let's proceed with your application!`);
+        // Additional functionality can be added here
+    }
+});
+
+// Add hover 3D effect
+document.querySelectorAll('.banner-card').forEach(card => {
+    card.addEventListener('mousemove', handleHover3D);
+    card.addEventListener('mouseleave', resetTilt);
+});
+
+function handleHover3D(e) {
+    const card = this;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    
+    const rotateY = ((x - centerX) / centerX) * 10;
+    const rotateX = -((y - centerY) / centerY) * 10;
+    
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+}
+
+function resetTilt() {
+    this.style.transform = '';
+    
+    // If card is selected, maintain the selected styling
+    if (this.classList.contains('selected')) {
+        this.style.transform = 'translateY(-10px) scale(1.03)';
+    }
+}
+</script>
+-->
+
+<!-- About Section -->
+<section id="about" class="about" style="margin-top: 5%; margin-bottom: -50px;">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <h2>About Avvai IAS Academy</h2>
+            <p>Empowering Aspirants for a Successful Career in Civil Services</p>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right" data-aos-delay="100">
+                <div class="about-img">
+                    <img src="images/acive.png" alt="About Avvai IAS Academy" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                <h3>Your Journey Begins Here</h3>
+                <p style="text-align: justify;">Founded in 2010, Avvai IAS Academy is one of the leading institutions for civil services coaching, specializing in TNPSC, SI, and other competitive exams. With a legacy of success, we aim to nurture and guide aspiring civil servants towards achieving their goals.</p>
+                               
+                <h3>Our Core Strengths</h3>
+                <p>We offer a comprehensive range of services to ensure success at every step of your preparation:</p>
+
+                <div class="row mt-4">
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-check-circle me-3" style="font-size: 1.5rem; color: #ff6b6b;"></i>
+                            <div>
+                                <h5 class="mb-0">Detailed Study Material</h5>
+                                <p style="text-align: justify;">In-depth notes and resources that cover every topic in the syllabus, simplifying complex concepts for easy understanding.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-check-circle me-3" style="font-size: 1.5rem; color: #ff6b6b;"></i>
+                            <div>
+                                <h5 class="mb-0">Timed Mock Tests</h5>
+                                <p style="text-align: justify;">Regular mock tests to track progress, improve speed and accuracy, and build exam confidence.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-check-circle me-3" style="font-size: 1.5rem; color: #ff6b6b;"></i>
+                            <div>
+                                <h5 class="mb-0">Interactive Doubt Clearing</h5>
+                                <p style="text-align: justify;">Personalized sessions to address your doubts and reinforce your understanding of key concepts.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-check-circle me-3" style="font-size: 1.5rem; color: #ff6b6b;"></i>
+                            <div>
+                                <h5 class="mb-0">Expert Interview Guidance</h5>
+                                <p style="text-align: justify;">Specialized interview preparation with mock interviews, personalized feedback, and confidence-building strategies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>               
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses bg-light" style="margin-top: 5%;">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Courses</h2>
+                <p>Specialized programs designed for your success</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="course-card card h-100">
+                        <div class="card-body text-center">
+                            <div class="course-icon">
+                                <i class="fas fa-landmark"></i>
+                            </div>
+                            <h4 class="card-title">TNPSC Exam Preparation</h4>
+                            <p class="card-text" style="text-align: justify;">Comprehensive coaching for all groups of Tamil Nadu Public Service Commission examinations with specialized focus on current affairs, Tamil Nadu specific syllabus, and previous year question analysis.</p>
+                            <div class="mt-4">
+                                <h5 class="align-left">Key Features:</h5>
+                                <ul class="text-start">
+                                    <li>Group 1, 2, 2A, and 4 specialized coaching</li>
+                                    <li>Bilingual study materials (Tamil & English)</li>
+                                    <li>Weekly tests and performance analytics</li>
+                                    <li>Interview training for shortlisted candidates</li>
+                                </ul>
+                            </div>
+                            <a href="#contact" class="btn btn-primary mt-3">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="course-card card h-100">
+                        <div class="card-body text-center">
+                            <div class="course-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4 class="card-title">SI Exam Preparation</h4>
+                            <p class="card-text" style="text-align: justify;">Specialized training for Sub-Inspector examinations with focus on both written examination and physical fitness tests. Our comprehensive program covers all aspects of the selection process.</p>
+                            <div class="mt-4">
+                                <h5 class="align-left">Key Features:</h5>
+                                <ul class="text-start">
+                                    <li>Written exam preparation with subject experts</li>
+                                    <li>Physical training guidance and tips</li>
+                                    <li>Personality development sessions</li>
+                                    <li>Special focus on psychological assessment</li>
+                                </ul>
+                            </div>
+                            <a href="#contact" class="btn btn-primary mt-3">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="course-card card h-100">
+                        <div class="card-body text-center">
+                            <div class="course-icon">
+                                <i class="fas fa-book-reader"></i>
+                            </div>
+                            <h4 class="card-title">Weekend Batch</h4>
+                            <p class="card-text" style="text-align: justify;">Specially designed for working professionals and college students who cannot attend regular weekday classes but aspire to prepare for civil service examinations.</p>
+                            <div class="mt-4">
+                                <h5 class="align-left">Key Features:</h5>
+                                <ul class="text-start">
+                                    <li>Intensive weekend sessions (Saturday & Sunday)</li>
+                                    <li>Compact syllabus coverage with focus on key topics</li>
+                                    <li>Online support during weekdays</li>
+                                    <li>Recorded lectures for revision</li>
+                                </ul>
+                            </div>
+                            <a href="#contact" class="btn btn-primary mt-3">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="course-card card h-100">
+                        <div class="card-body text-center">
+                            <div class="course-icon">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <h4 class="card-title">Test Batch</h4>
+                            <p class="card-text" style="text-align: justify;">Distance is no barrier to quality education. Our online program offers the same quality coaching with flexibility of learning from anywhere at your own pace.</p>
+                            <div class="mt-4">
+                                <h5 class="align-left">Key Features:</h5>
+                                <ul class="text-start">
+                                    <li>Live interactive classes with faculty</li>
+                                    <li>Digital study materials and resources</li>
+                                    <li>Online test series with detailed analysis</li>
+                                    <li>One-on-one doubt clearing sessions</li>
+                                </ul>
+                            </div>
+                            <a href="#contact" class="btn btn-primary mt-3">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </section>
+<style>
+    .align-left {
+    text-align: left;
+}
+h5.align-left {
+    text-align: left;
+    margin-top: 0;    /* Removes top margin */
+    margin-bottom: 10px;  /* Adjusts the space below the heading */
+}
+
+.card-text {
+    margin-bottom: 0;  /* Removes the margin below the paragraph */
+    padding-bottom: 0; /* Removes any padding */
+}
+</style>
+    <!-- Counter Section -->
+    <section class="counter-section" style="margin-bottom: 2%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="counter-box">
+                        <div class="counter-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="counter" data-target="1500">0</div>
+                        <div class="counter-text">STUDENTS TRAINED</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="counter-box">
+                        <div class="counter-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="counter" data-target="750">0</div>
+                        <div class="counter-text">SUCCESSFUL PLACEMENTS</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="counter-box">
+                        <div class="counter-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <div class="counter" data-target="15">0</div>
+                        <div class="counter-text">YEARS OF EXCELLENCE</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="counter-box">
+                        <div class="counter-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="counter" data-target="20">0</div>
+                        <div class="counter-text">SPECIALIZED COURSES</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Test Series Section -->
+    <section id="test-series" class="test-series" style="margin-bottom: 2%;">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Test Series</h2>
+                <p>Regular assessments to track your progress</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="test-card">
+                        <div class="card-body">
+                            <span class="test-date">Weekly Tests</span>
+                            <h4 class="mb-3">Subject-wise Weekly Tests</h4>
+                            <p  style="text-align: justify;">Weekly subject-focused tests to strengthen your fundamentals and concept clarity. Each test is followed by detailed solutions and discussion.</p>
+                            <ul class="mt-3">
+                                <li>Duration: 1 hour</li>
+                                <li>Question type: MCQs</li>
+                                <li>Performance analytics provided</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="test-card">
+                        <div class="card-body">
+                            <span class="test-date">Monthly Tests</span>
+                            <h4 class="mb-3">Comprehensive Monthly Assessment</h4>
+                            <p  style="text-align: justify;">Monthly comprehensive tests covering multiple subjects to simulate exam conditions and build stamina for the actual examination.</p>
+                            <ul class="mt-3">
+                                <li>Duration: 3 hours</li>
+                                <li>Question type: MCQs and descriptive</li>
+                                <li>One-on-one feedback session</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="test-card">
+                        <div class="card-body">
+                            <span class="test-date">Mock Tests</span>
+                            <h4 class="mb-3">Full-length Mock Examinations</h4>
+                            <p  style="text-align: justify;">Full-length mock tests designed exactly like the actual examination with the same pattern, difficulty level, and time constraints.</p>
+                            <ul class="mt-3">
+                                <li>Full exam duration</li>
+                                <li>Actual exam pattern followed</li>
+                                <li>Detailed result analysis</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="test-card">
+                        <div class="card-body">
+                            <span class="test-date">Special Tests</span>
+                            <h4 class="mb-3">Current Affairs Special</h4>
+                            <p  style="text-align: justify;">Special tests focused exclusively on current affairs, which form a significant portion of both TNPSC and SI examinations.</p>
+                            <ul class="mt-3">
+                                <li>Bi-weekly current affairs tests</li>
+                                <li>Tamil Nadu specific current events</li>
+                                <li>National and international affairs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="test-card">
+                        <div class="card-body">
+                            <span class="test-date">Online Tests</span>
+                            <h4 class="mb-3">Digital Assessment Platform</h4>
+                            <p  style="text-align: justify;">Online test series accessible from anywhere, anytime. Practice at your convenience and receive instant evaluation and feedback.</p>
+                            <ul class="mt-3">
+                                <li>24/7 accessible platform</li>
+                                <li>Instant evaluation</li>
+                                <li>Performance comparison with peers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="test-card">
+                        <div class="card-body">
+                            <span class="test-date">Mastery Test Series</span>
+                            <h4 class="mb-3">Previous Year Question Bank</h4>
+                            <p  style="text-align: justify;">Comprehensive collection of previous years' questions with detailed explanations to understand the examination pattern and important topics.</p>
+                            <ul class="mt-3">
+                                <li>Last 10 years' questions</li>
+                                <li>Topic-wise classification</li>
+                                <li>Detailed explanations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+  <!-- upcoming Exams -->
+  <div class="exam-container">
+    <div style="text-align: center; margin-bottom: 40px;">
+      <h2 style="position: relative; display: inline-block; font-size: 32px; color: #2c3e50; font-weight: bold; margin: 0; padding-bottom: 12px;">
+        Upcoming Bank/Govt. Exams in 2025
+        <span style="position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 60px; height: 4px; background-color: #f39c12; border-radius: 2px;"></span>
+      </h2>
+    </div>        
+  
+    <!-- First Scrollable Row -->
+    <div class="exam-scroll" id="scroll1">
+      <div class="exam-row">
+        <!-- Bank Exams -->
+        <div class="exam-card">
+          <div class="exam-logo">
+            <img src="images/logos/sbi_logo.png" alt="SBI Logo">
+          </div>
+          <div class="exam-name">SBI PO Exam</div>
+        </div>
+        
+        <div class="exam-card">
+          <div class="exam-logo">
+            <img src="images/logos/sbi_logo.png" alt="SBI Logo">
+          </div>
+          <div class="exam-name">SBI Clerk Exam</div>
+        </div>
+        
+        <div class="exam-card">
+          <div class="exam-logo">
+            <img src="images/logos/ibps.jpg" alt="IBPS Logo">
+          </div>
+          <div class="exam-name">IBPS PO Exam</div>
+        </div>
+        
+        <div class="exam-card">
+          <div class="exam-logo">
+            <img src="images/logos/ibps.jpg" alt="IBPS Logo">
+          </div>
+          <div class="exam-name">IBPS Clerk Exam</div>
+        </div>
+        
+        <div class="exam-card">
+          <div class="exam-logo">
+            <img src="images/logos/ibps.jpg" alt="IBPS Logo">
+          </div>
+          <div class="exam-name">IBPS RRB PO Exam</div>
+        </div>
+        
+        <div class="exam-card">
+          <div class="exam-logo">
+            <img src="images/logos/rbi.jpg" alt="RBI Logo">
+          </div>
+          <div class="exam-name">RBI Grade B Exam</div>
+        </div>
+        
+        <div class="exam-card">
+          <div class="exam-logo">
+            <img src="images/logos/rbi.jpg" alt="RBI Logo">
+          </div>
+          <div class="exam-name">RBI Assistant Exam</div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Second Scrollable Row -->
+    <div class="exam-scroll" id="scroll2">
+      <div class="exam-row">
+        <!-- Government Exams -->
+        <div class="exam-card">
+          <div class="exam-logo">
+            <img src="images/logos/upsc.png" alt="UPSC Logo">
+          </div>
+          <div class="exam-name">UPSC Civil Services Exam</div>
+        </div>
+        
+        <div class="exam-card">
+          <div class="exam-logo">
+            <img src="images/logos/ssc.jpg" alt="SSC Logo">
+          </div>
+          <div class="exam-name">SSC CGL Exam</div>
+        </div>
+        
+        <div class="exam-card">
+          <div class="exam-logo">
+            <img src="images/logos/ssc.jpg" alt="SSC Logo">
+          </div>
+          <div class="exam-name">SSC CHSL Exam</div>
+        </div>
+        
+        <div class="exam-card">
+          <div class="exam-logo">
+            <img src="images/logos/tnpsc.jpg" alt="TNPSC Logo">
+          </div>
+          <div class="exam-name">TNPSC Group I Exam</div>
+        </div>
+        
+        <div class="exam-card">
+          <div class="exam-logo">
+            <img src="images/logos/tnpsc.jpg" alt="TNPSC Logo">
+          </div>
+          <div class="exam-name">TNPSC Group II Exam</div>
+        </div>
+        
+        <div class="exam-card">
+          <div class="exam-logo">
+            <img src="images/logos/tnpsc.jpg" alt="TNPSC Logo">
+          </div>
+          <div class="exam-name">TNPSC Group IV Exam</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const scrollContainers = document.querySelectorAll('.exam-scroll');
+      
+      scrollContainers.forEach(container => {
+        // Clone cards for infinite loop effect
+        const row = container.querySelector('.exam-row');
+        const cloneContainer = document.createElement('div');
+        cloneContainer.className = 'clone-container';
+        cloneContainer.innerHTML = row.innerHTML;
+        row.appendChild(cloneContainer);
+        
+        // Calculate the total width of original cards for animation
+        let totalWidth = 0;
+        const cards = row.querySelectorAll('.exam-card:not(.clone-container .exam-card)');
+        cards.forEach(card => {
+          const style = window.getComputedStyle(card);
+          const width = parseInt(style.width) + parseInt(style.marginRight);
+          totalWidth += width;
+        });
+        
+        // Set animation duration based on content width
+        const duration = totalWidth / 50; // Adjust speed by changing divisor
+        row.style.animationDuration = duration + 's';
+        
+        // Pause animation on hover
+        container.addEventListener('mouseenter', () => {
+          row.style.animationPlayState = 'paused';
+        });
+        
+        container.addEventListener('mouseleave', () => {
+          row.style.animationPlayState = 'running';
+        });
+      });
+    });
+  </script>
+
+  <style>
+      .exam-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .exam-scroll {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    height: 100px;
+  }
+  
+  .exam-row {
+    display: flex;
+    position: absolute;
+    animation: scrollCards 30s linear infinite;
+  }
+  
+  @keyframes scrollCards {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  .exam-card {
+    flex: 0 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    min-width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    min-height: 70px;
+  }
+  
+  .exam-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .exam-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .exam-logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .exam-name {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .clone-container {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    display: flex;
+  }
+  .exam-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .exam-scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
+  
+  .exam-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+  
+  .exam-row {
+    display: inline-flex;
+  }
+  
+  .exam-card {
+    flex: 0 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    min-width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    min-height: 70px;
+  }
+  
+  .exam-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .exam-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .exam-logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .exam-name {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .exam-card {
+      max-width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .exam-row {
+      gap: 15px;
+    }
+  
+    .exam-card {
+      padding: 12px;
+    }
+  
+    .exam-name {
+      font-size: 14px;
+    }
+  }
+  </style>
+  
+  <script>
+  // Auto scroll functionality
+  const scrollContainers = document.querySelectorAll('.exam-scroll');
+  
+  scrollContainers.forEach(container => {
+    let scrollAmount = 0;
+    let slideTimer = setInterval(function() {
+      container.scrollLeft += 1;
+      scrollAmount += 1;
+      if (scrollAmount >= 200) { // scroll distance before resetting
+        scrollAmount = 0;
+        container.scrollLeft = 0;
+      }
+    }, 20); // Adjust scroll speed here
+  });
+  </script>
+
+
+  
+<!-- youtube -->
+<section class="youtube-section">
+    <div class="container">
+        <div class="section-heading text-center">
+            <span class="accent">
+                Learn with <span style="font-weight: bold;">us</span>
+            </span>
+          
+            <h2>Our YouTube Resources</h2>
+            <p class="w-75 mx-auto text-muted">Access our comprehensive video lessons, tips, and strategies for government exam preparation.</p>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="category-tabs">
+            <div class="category-tab tab-all">All Videos</div>
+            <div class="category-tab tab-exam">Exam Prep</div>
+            <div class="category-tab tab-current">Current Affairs</div>
+            <div class="category-tab tab-history">History</div>
+            <div class="category-tab tab-tips">Tips & Tricks</div>
+        </div>
+
+        <div class="row">
+            <!-- Featured Video -->
+            <div class="col-lg-8 mb-4">
+                <div class="featured-video" data-video-id="vv8zgL_NeBs" data-video-title="TNPSC Group 2 Interview Post Top 3 Tips">
+                    <div class="featured-thumbnail">
+                        <img src="https://img.youtube.com/vi/vv8zgL_NeBs/maxresdefault.jpg" alt="TNPSC Group 2 Interview" class="thumbnail-img">
+                        <div class="featured-play-overlay">
+                            <div class="featured-play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="featured-badge">
+                            <i class="fas fa-star"></i> Featured
+                        </div>
+                        <div class="featured-caption">
+                            <h4>TNPSC Group 2 Interview Post Top 3 Tips</h4>
+                            <div class="d-flex align-items-center">
+                                <span class="me-3"><i class="fas fa-calendar-alt me-1"></i> Apr 18, 2025</span>
+                                <span><i class="fas fa-eye me-1"></i> 2.3K views</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Small Video Pills -->
+            <div class="col-lg-4">
+                <h5 class="mb-3 fw-bold">Popular Videos</h5>
+                
+                <div class="video-pill" data-video-id="HLD9BXFfpN4" data-video-title="TNUSRB Police SI Exam Session">
+                    <div class="pill-thumbnail">
+                        <img src="https://img.youtube.com/vi/HLD9BXFfpN4/mqdefault.jpg" alt="TNUSRB Police SI Exam" class="thumbnail-img">
+                        <div class="pill-play-overlay">
+                            <div class="pill-play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pill-info">
+                        <h6>TNUSRB Police SI Exam Session</h6>
+                        <div class="pill-meta">
+                            <i class="fas fa-eye me-1"></i> 3.1K views
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-pill" data-video-id="oyAJ6E5iu-g" data-video-title="Tamil Nadu Geography Special">
+                    <div class="pill-thumbnail">
+                        <img src="https://img.youtube.com/vi/oyAJ6E5iu-g/mqdefault.jpg" alt="Tamil Nadu Geography" class="thumbnail-img">
+                        <div class="pill-play-overlay">
+                            <div class="pill-play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pill-info">
+                        <h6>Tamil Nadu Geography Special</h6>
+                        <div class="pill-meta">
+                            <i class="fas fa-eye me-1"></i> 4.5K views
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-pill" data-video-id="oyAJ6E5iu-g" data-video-title="Tamil Nadu Geography Special">
+                    <div class="pill-thumbnail">
+                        <img src="https://img.youtube.com/vi/oyAJ6E5iu-g/mqdefault.jpg" alt="Tamil Nadu Geography" class="thumbnail-img">
+                        <div class="pill-play-overlay">
+                            <div class="pill-play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pill-info">
+                        <h6>Tamil Nadu Geography Special</h6>
+                        <div class="pill-meta">
+                            <i class="fas fa-eye me-1"></i> 4.5K views
+                        </div>
+                    </div>
+                </div>
+
+                
+                
+                <div class="video-pill" data-video-id="txpoBmv5WNY" data-video-title="TNPSC Group 1 Strategy 2025">
+                    <div class="pill-thumbnail">
+                        <img src="https://img.youtube.com/vi/txpoBmv5WNY/mqdefault.jpg" alt="TNPSC Group 1 Strategy" class="thumbnail-img">
+                        <div class="pill-play-overlay">
+                            <div class="pill-play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pill-info">
+                        <h6>TNPSC Group 1 Strategy 2025</h6>
+                        <div class="pill-meta">
+                            <i class="fas fa-eye me-1"></i> 5.2K views
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-pill" data-video-id="BMcTe11tHrk" data-video-title="Current Affairs April 2025">
+                    <div class="pill-thumbnail">
+                        <img src="https://img.youtube.com/vi/BMcTe11tHrk/mqdefault.jpg" alt="Current Affairs April" class="thumbnail-img">
+                        <div class="pill-play-overlay">
+                            <div class="pill-play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pill-info">
+                        <h6>Current Affairs April 2025</h6>
+                        <div class="pill-meta">
+                            <i class="fas fa-eye me-1"></i> 3.7K views
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <!-- Different style video cards -->
+            <div class="col-lg-4 col-md-6">
+                <div class="video-card primary" data-video-id="Z3ognToADC8" data-video-title="Important History Topics for TNPSC Exams">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/HLD9BXFfpN4/hqdefault.jpg" alt="TNUSRB Police SI Exam" class="thumbnail-img">
+                        <div class="play-overlay">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-tag tag-featured">Featured</div>
+                    </div>
+                    
+                    <div class="video-meta">
+                        <h5>Important History Topics for TNPSC Exams</h5>
+                        <div class="meta-info">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Apr 5, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-eye"></i>
+                                <span>4.9K views</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="video-card secondary" data-video-id="oyAJ6E5iu-g" data-video-title="Tamil Nadu Geography Special Class">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/oyAJ6E5iu-g/hqdefault.jpg" alt="Tamil Nadu Geography" class="thumbnail-img">
+                        <div class="play-overlay">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-tag tag-new">New</div>
+                    </div>
+                    <div class="video-meta">
+                        <h5>Tamil Nadu Geography Special Class</h5>
+                        <div class="meta-info">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Apr 22, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-eye"></i>
+                                <span>4.5K views</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="video-card accent" data-video-id="HLD9BXFfpN4" data-video-title="TNUSRB Police SI Exam Special Session">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/HLD9BXFfpN4/hqdefault.jpg" alt="TNUSRB Police SI Exam" class="thumbnail-img">
+                        <div class="play-overlay">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-tag tag-featured">Featured</div>
+                    </div>
+                    <div class="video-meta">
+                        <h5>TNUSRB Police SI Exam Special Session</h5>
+                        <div class="meta-info">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Apr 20, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-eye"></i>
+                                <span>3.1K views</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <a href="https://www.youtube.com/@avvaiiasacademy.thuraiyur6337" target="_blank" class="channel-button">
+                Subscribe to Our Channel <i class="fas fa-external-link-alt"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Video Modal -->
+<div class="video-modal" id="videoModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="modalTitle">Video Title</h5>
+            <button type="button" class="modal-close" id="closeModal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <iframe id="modalIframe" src="" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Video modal functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('videoModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalIframe = document.getElementById('modalIframe');
+        const closeModal = document.getElementById('closeModal');
+        
+        // All video elements that can be clicked
+        const videoElements = document.querySelectorAll('.featured-video, .video-pill, .video-card');
+        
+        // Open modal when clicking on any video element
+        videoElements.forEach(function(element) {
+            element.addEventListener('click', function() {
+                const videoId = this.getAttribute('data-video-id');
+                const videoTitle = this.getAttribute('data-video-title');
+                
+                // Set the modal content
+                modalTitle.textContent = videoTitle;
+                modalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                
+                // Show the modal
+                modal.classList.add('active');
+                
+                // Prevent body scrolling
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        // Close modal when clicking the close button
+        closeModal.addEventListener('click', function() {
+            closeVideoModal();
+        });
+        
+        // Close modal when clicking outside the content
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeVideoModal();
+            }
+        });
+        
+        // Close modal on escape key press
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeVideoModal();
+            }
+        });
+        
+        // Function to close the modal
+        function closeVideoModal() {
+            modal.classList.remove('active');
+            
+            // Stop video playback
+            setTimeout(function() {
+                modalIframe.src = '';
+            }, 300);
+            
+            // Allow body scrolling again
+            document.body.style.overflow = '';
+        }
+    });
+</script>
+<style>
+    :root {
+        --primary-color: #3f51b5;
+        --secondary-color: #ff9800;
+        --accent-color: #e91e63;
+        --dark-color: #212121;
+        --light-color: #f8f9fa;
+    }
+    
+    body {
+        background-color: var(--light-color);
+    }
+    
+    .youtube-section {
+        padding: 60px 0;
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    }
+    
+    .section-heading {
+        position: relative;
+        margin-bottom: 50px;
+    }
+    
+    .section-heading h2 {
+        font-weight: 700;
+        display: inline-block;
+        background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding-bottom: 10px;
+    }
+    
+    .section-heading .accent {
+        color: red;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 13px;
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    /* Card Styles */
+    .video-card {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+        margin-bottom: 25px;
+        background: white;
+        cursor: pointer;
+    }
+    
+    /* Different styles for each type */
+    .video-card.primary {
+        border-top: 4px solid var(--primary-color);
+    }
+    
+    .video-card.secondary {
+        border-left: 4px solid var(--secondary-color);
+    }
+    
+    .video-card.accent {
+        border-bottom: 4px solid var(--accent-color);
+    }
+    
+    .video-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+    }
+    
+    .video-thumbnail {
+        position: relative;
+        overflow: hidden;
+        height: 160px;
+        object-fit: fill;        
+        background-size: cover;
+        background-position: center;
+    }
+    .thumbnail-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        display: block;
+    }
+        
+    .play-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    
+    .play-button {
+        width: 60px;
+        height: 60px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        transform: scale(0.8);
+        transition: all 0.3s ease;
+    }
+    
+    .play-button i {
+        color: var(--primary-color);
+        font-size: 24px;
+        margin-left: 5px;
+    }
+    
+    .video-card:hover .play-overlay {
+        opacity: 1;
+    }
+    
+    .video-card:hover .play-button {
+        transform: scale(1);
+    }
+    
+    .video-meta {
+        padding: 15px;
+    }
+    
+    .video-meta h5 {
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 10px;
+        line-height: 1.4;
+    }
+    
+    .meta-info {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: #777;
+    }
+    
+    .meta-item {
+        display: flex;
+        align-items: center;
+    }
+    
+    .meta-item i {
+        margin-right: 5px;
+    }
+    
+    /* Tags */
+    .video-tag {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 3px 10px;
+        border-radius: 20px;
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        z-index: 3;
+    }
+    
+    .tag-new {
+        background-color: var(--accent-color);
+        color: white;
+    }
+    
+    .tag-featured {
+        background-color: var(--primary-color);
+        color: white;
+    }
+    
+    .tag-popular {
+        background-color: var(--secondary-color);
+        color: white;
+    }
+    
+    /* Featured video */
+    .featured-video {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 25px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        cursor: pointer;
+    }
+    
+    .featured-thumbnail {
+        width: 100%;
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    
+    .featured-play-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    
+    .featured-play-button {
+        width: 80px;
+        height: 80px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        transform: scale(0.8);
+        transition: all 0.3s ease;
+    }
+    
+    .featured-play-button i {
+        color: var(--primary-color);
+        font-size: 30px;
+        margin-left: 8px;
+    }
+    
+    .featured-video:hover .featured-play-overlay {
+        opacity: 1;
+    }
+    
+    .featured-video:hover .featured-play-button {
+        transform: scale(1);
+    }
+    
+    .featured-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: rgba(255,255,255,0.9);
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 12px;
+        color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        z-index: 3;
+    }
+    
+    .featured-badge i {
+        margin-right: 5px;
+    }
+    
+    .featured-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+        color: white;
+    }
+    
+    .featured-caption h4 {
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    
+    /* Channel button */
+    .channel-button {
+        display: inline-block;
+        background: linear-gradient(45deg, var(--primary-color), #5c6bc0);
+        color: white;
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        box-shadow: 0 10px 20px rgba(63, 81, 181, 0.3);
+        transition: all 0.3s ease;
+        text-decoration: none;
+        margin-top: 20px;
+    }
+    
+    .channel-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 30px rgba(63, 81, 181, 0.4);
+        color: white;
+    }
+    
+    .channel-button i {
+        margin-left: 5px;
+        transition: transform 0.3s ease;
+    }
+    
+    .channel-button:hover i {
+        transform: translateX(5px);
+    }
+    
+    /* Small video pills */
+    .video-pill {
+        display: flex;
+        align-items: center;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 15px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .video-pill:hover {
+        transform: translateX(5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .pill-thumbnail {
+        width: 100px;
+        height: 70px;
+        overflow: hidden;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .pill-play-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    
+    .pill-play-button {
+        width: 30px;
+        height: 30px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: scale(0.8);
+        transition: all 0.3s ease;
+    }
+    
+    .pill-play-button i {
+        color: var(--primary-color);
+        font-size: 12px;
+        margin-left: 2px;
+    }
+    
+    .video-pill:hover .pill-play-overlay {
+        opacity: 1;
+    }
+    
+    .video-pill:hover .pill-play-button {
+        transform: scale(1);
+    }
+    
+    .pill-info {
+        padding: 8px 12px;
+        flex: 1;
+    }
+    
+    .pill-info h6 {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        line-height: 1.3;
+    }
+    
+    .pill-meta {
+        font-size: 11px;
+        color: #888;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+        .featured-thumbnail {
+            height: 250px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .featured-thumbnail {
+            height: 200px;
+        }
+        
+        .video-thumbnail {
+            height: 160px;
+        }
+    }
+    
+    /* Category tabs */
+    .category-tabs {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+    }
+    
+    .category-tab {
+        padding: 8px 20px;
+        margin: 0 5px 10px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    }
+    
+    .tab-all {
+        background-color: var(--primary-color);
+        color: white;
+    }
+    
+    .tab-exam {
+        background-color: var(--secondary-color);
+        color: white;
+    }
+    
+    .tab-current {
+        background-color: var(--accent-color);
+        color: white;
+    }
+    
+    .tab-history {
+        background-color: #4caf50;
+        color: white;
+    }
+    
+    .tab-tips {
+        background-color: #9c27b0;
+        color: white;
+    }
+    
+    /* Video Modal */
+    .video-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .video-modal.active {
+        display: flex;
+        opacity: 1;
+    }
+    
+    .modal-content {
+        width: 90%;
+        max-width: 900px;
+        background-color: black;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+    }
+    
+    .video-modal.active .modal-content {
+        transform: scale(1);
+    }
+    
+    .modal-header {
+        padding: 15px 20px;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .modal-title {
+        font-weight: 600;
+        font-size: 18px;
+        margin: 0;
+        color: var(--dark-color);
+    }
+    
+    .modal-close {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #888;
+        transition: color 0.3s ease;
+    }
+    
+    .modal-close:hover {
+        color: var(--accent-color);
+    }
+    
+    .modal-body {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+    }
+    
+    .modal-body iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    
+    /* Make sure thumbnail images are displayed and visible */
+    .thumbnail-img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .video-thumbnail {
+        position: relative;
+        cursor: pointer;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 0 10px;
+        flex: 0 0 250px; /* Fixed width for each thumbnail */
+    }
+    
+    .video-thumbnail img {
+        width: 100%;
+        display: block;
+        border-radius: 8px;
+        height: 160px; /* Fixed height for consistency */
+        object-fit: cover;
+    }
+</style>
+
+
+
+<!-- testimonial-section -->
+<section class="avvai-testimonial-section">
+    <div class="avvai-testimonial-container">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Student Testimonials</h2>
+            <p class="avvai-testimonial-subheading">At Avvai IAS Academy, countless aspirants have turned their dreams into reality. Hear directly from our students, who have secured prestigious positions and built a future full of purpose and pride.</p>
+        </div>
+        <!-- Row 1 with marquee effect -->
+        <div class="avvai-marquee-row">
+            <div class="avvai-accent-line avvai-accent-red"></div>
+            <div class="avvai-marquee-container">
+                <div class="avvai-marquee-track" id="avvaiMarqueeTrack1">
+                    <!-- Video thumbnails for row 1 will be dynamically added here and duplicated -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Row 2 with reverse marquee effect -->
+        <div class="avvai-marquee-row">
+            <div class="avvai-marquee-container">
+                <div class="avvai-marquee-track" id="avvaiMarqueeTrack2">
+                    <!-- Video thumbnails for row 2 will be dynamically added here and duplicated -->
+                </div>
+            </div>
+            <div class="avvai-accent-line avvai-accent-green"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Video Modal -->
+<div class="modal fade avvai-video-modal" id="avvaiVideoModal" tabindex="-1" aria-labelledby="avvaiVideoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <iframe id="avvaiVideoPlayer" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Font Awesome for play icon -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+
+<script>
+    // Corrected video data
+    const avvaiTestimonialVideos = [
+        {
+            id: 1,
+            thumbnail: "images/video1.png",
+            videoUrl: "https://www.youtube.com/embed/ph0Cjx477Qc?autoplay=1",
+            title: "Success Story 1"
+        },
+        {
+            id: 2,
+            thumbnail: "images/video2.png",
+            videoUrl: "https://www.youtube.com/embed/QTAp3O6kbvo?autoplay=1",
+            title: "Success Story 2"
+        },
+        {
+            id: 3,
+            thumbnail: "images/video3.png",
+            videoUrl: "https://www.youtube.com/embed/idowT2UvSAk?autoplay=1",
+            title: "Success Story 3"
+        },
+        {
+            id: 4,
+            thumbnail: "images/video4.png",
+            videoUrl: "https://www.youtube.com/embed/H4gUW5jFiPY?autoplay=1",
+            title: "Success Story 4"
+        },
+        {
+            id: 5,
+            thumbnail: "images/video5.png",
+            videoUrl: "https://www.youtube.com/embed/w3PkrnN-Q_w?autoplay=1",
+            title: "Success Story 5"
+        },
+        {
+            id: 6,
+            thumbnail: "images/video6.png",
+            videoUrl: "https://www.youtube.com/embed/w3PkrnN-Q_w?autoplay=1",
+            title: "Success Story 6"
+        },
+        {
+            id: 7,
+            thumbnail: "images/video7.png",
+            videoUrl: "https://www.youtube.com/embed/OCTg78_81Zw?autoplay=1",
+            title: "Success Story 7"
+        },
+        {
+            id: 8,
+            thumbnail: "images/video8.png",
+            videoUrl: "https://www.youtube.com/embed/GH6arZK_2QXTvn6P?autoplay=1",
+            title: "Success Story 8"
+        }
+    ];
+
+    // Function to generate video thumbnails for marquee
+    function generateAvvaiMarqueeContent() {
+        const track1 = document.getElementById('avvaiMarqueeTrack1');
+        const track2 = document.getElementById('avvaiMarqueeTrack2');
+        
+        // Create thumbnails for first track (first half of videos)
+        const firstHalf = avvaiTestimonialVideos.slice(0, Math.ceil(avvaiTestimonialVideos.length / 2));
+        firstHalf.forEach(video => {
+            const thumbnail = createAvvaiVideoThumbnail(video);
+            track1.appendChild(thumbnail);
+        });
+        
+        // Duplicate the content for continuous scrolling effect
+        firstHalf.forEach(video => {
+            const thumbnail = createAvvaiVideoThumbnail(video);
+            track1.appendChild(thumbnail);
+        });
+        
+        // Create thumbnails for second track (second half of videos)
+        const secondHalf = avvaiTestimonialVideos.slice(Math.ceil(avvaiTestimonialVideos.length / 2));
+        secondHalf.forEach(video => {
+            const thumbnail = createAvvaiVideoThumbnail(video);
+            track2.appendChild(thumbnail);
+        });
+        
+        // Duplicate the content for continuous scrolling effect
+        secondHalf.forEach(video => {
+            const thumbnail = createAvvaiVideoThumbnail(video);
+            track2.appendChild(thumbnail);
+        });
+    }
+    
+    // Helper function to create a video thumbnail element
+    function createAvvaiVideoThumbnail(video) {
+        const thumbnailDiv = document.createElement('div');
+        thumbnailDiv.className = 'avvai-video-thumbnail';
+        thumbnailDiv.setAttribute('data-video-url', video.videoUrl);
+        thumbnailDiv.setAttribute('data-bs-toggle', 'modal');
+        thumbnailDiv.setAttribute('data-bs-target', '#avvaiVideoModal');
+        
+        thumbnailDiv.innerHTML = `
+            <img src="${video.thumbnail}" alt="${video.title}">
+            <div class="avvai-play-icon">
+                <i class="fas fa-play"></i>
+            </div>
+        `;
+        
+        return thumbnailDiv;
+    }
+
+    // Initialize marquee content
+    document.addEventListener('DOMContentLoaded', function() {
+        generateAvvaiMarqueeContent();
+        
+        // Handle video modal events
+        const videoModal = document.getElementById('avvaiVideoModal');
+        const videoPlayer = document.getElementById('avvaiVideoPlayer');
+        
+        document.querySelectorAll('.avvai-video-thumbnail').forEach(thumbnail => {
+            thumbnail.addEventListener('click', function() {
+                const videoUrl = this.getAttribute('data-video-url');
+                videoPlayer.setAttribute('src', videoUrl);
+            });
+        });
+        
+        videoModal.addEventListener('hidden.bs.modal', function() {
+            videoPlayer.setAttribute('src', '');
+        });
+    });
+</script>
+<style>
+    .avvai-testimonial-section {
+        padding: 40px 0;
+        background-color: #f8f9fa;
+        overflow: hidden;
+    }
+    .avvai-testimonial-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .avvai-testimonial-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    
+    .avvai-testimonial-heading {
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    
+    .avvai-testimonial-subheading {
+        text-align: center;
+        margin-bottom: 40px;
+        color: #555;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .avvai-video-thumbnail {
+        position: relative;
+        cursor: pointer;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 0 10px;
+        flex: 0 0 250px; /* Fixed width for each thumbnail */
+    }
+    
+    .avvai-video-thumbnail img {
+        width: 100%;
+        display: block;
+        border-radius: 8px;
+        height: 160px; /* Fixed height for consistency */
+        object-fit: cover;
+    }   
+    
+    .avvai-play-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.8);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .avvai-play-icon i {
+        color: #dc3545;
+        font-size: 20px;
+    }
+    
+    .avvai-video-modal .modal-dialog {
+        max-width: 800px;
+    }
+    
+    .avvai-video-modal .modal-content {
+        background-color: transparent;
+        border: none;
+    }
+    
+    .avvai-video-modal .modal-body {
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    }
+    
+    .avvai-video-modal iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+    
+    /* Marquee styles */
+    .avvai-marquee-container {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        margin: 20px 0;
+    }
+    
+    .avvai-marquee-track {
+        display: flex;
+        width: fit-content;
+        animation: avvaiMarquee 30s linear infinite;
+    }
+    
+    .avvai-marquee-track:hover {
+        animation-play-state: paused;
+    }
+    
+    @keyframes avvaiMarquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+    
+    /* Create two rows of marquee */
+    .avvai-marquee-row {
+        margin-bottom: 20px;
+    }
+    
+    .avvai-marquee-row:nth-child(2) .avvai-marquee-track {
+        animation-direction: reverse;
+        animation-duration: 35s;
+    }
+    
+    /* Red and green accent lines */
+    .avvai-accent-line {
+        height: 4px;
+        width: 100px;
+        margin: 10px 0;
+        display: inline-block;
+    }
+    
+    .avvai-accent-line.avvai-accent-red {
+        background-color: #dc3545;
+    }
+    
+    .avvai-accent-line.avvai-accent-green {
+        background-color: #198754;
+    }
+    
+    @media (max-width: 767px) {
+        .avvai-video-thumbnail {
+            flex: 0 0 200px;
+        }
+        
+        .avvai-video-thumbnail img {
+            height: 120px;
+        }
+    }
+</style>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials bg-light" style="margin-top:  0%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-item text-center">
+                        <img src="images/about.png" alt="Testimonial" class="testimonial-img">
+                        <h5 class="testimonial-name">Rajkumar S</h5>
+                        <p class="testimonial-position">Selected for TNPSC Group 1</p>
+                        <div class="testimonial-text">
+                            <p  style="text-align: justify;">Avvai IAS Academy played a crucial role in my success. The structured approach, quality study materials, and regular mock tests prepared me thoroughly for the examination. The faculty's guidance was exceptional.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-item text-center">
+                        <img src="images/about.png" alt="Testimonial" class="testimonial-img">
+                        <h5 class="testimonial-name">Priya M</h5>
+                        <p class="testimonial-position">Selected for SI Position</p>
+                        <div class="testimonial-text">
+                            <p  style="text-align: justify;">The comprehensive coaching for SI examination at Avvai Academy covered both written and physical aspects of the exam. Their personalized attention and motivation helped me achieve my dream of becoming a Sub-Inspector.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-item text-center">
+                        <img src="images/about.png" alt="Testimonial" class="testimonial-img">
+                        <h5 class="testimonial-name">Ram s</h5>
+                        <p class="testimonial-position">Selected for TNPSC Group 2</p>
+                        <div class="testimonial-text">
+                            <p  style="text-align: justify;">Being a working professional, the weekend batch was perfect for me. Despite the limited time, the faculty covered the entire syllabus efficiently and the test series helped me identify and improve my weak areas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="testimonial-item text-center">
+                        <img src="images/about.png" alt="Testimonial" class="testimonial-img">
+                        <h5 class="testimonial-name">Lakshmi R</h5>
+                        <p class="testimonial-position">Selected for TNPSC Group 4</p>
+                        <div class="testimonial-text">
+                            <p  style="text-align: justify;">The online program of Avvai IAS Academy was my savior as I couldn't attend physical classes due to personal constraints. The quality of online lectures and study materials was exceptional, and I succeeded in my first attempt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="testimonial-item text-center">
+                        <img src="images/about.png" alt="Testimonial" class="testimonial-img">
+                        <h5 class="testimonial-name">Sundar K</h5>
+                        <p class="testimonial-position">Selected for TNPSC Group 2A</p>
+                        <div class="testimonial-text">
+                            <p  style="text-align: justify;">After multiple failed attempts, I joined Avvai Academy as a last resort. Their methodical approach, emphasis on fundamentals, and regular practice tests transformed my preparation. Forever grateful for their guidance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="testimonial-item text-center">
+                        <img src="images/about.png" alt="Testimonial" class="testimonial-img">
+                        <h5 class="testimonial-name">Meena P</h5>
+                        <p class="testimonial-position">Selected for SI Position</p>
+                        <div class="testimonial-text">
+                            <p  style="text-align: justify;">As a woman aspiring for the SI position, I had additional challenges to overcome. The academy provided specialized training, motivation, and a supportive environment. Their belief in me strengthened my own confidence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us for any inquiries</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                    <div class="contact-info">
+                        <h3>Reach Out to Us</h3>
+                        <p class="mb-4">Have questions about our courses, test series, or admission process? Our team is ready to assist you. Contact us through any of the following means or visit our academy during office hours.</p>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h5>Our Location</h5>
+                                <p>avvai ias academy,thuraiyur,trichy, Tamil Nadu</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h5>Call Us</h5>
+                                <p>+91 98765 43210 / +91 87654 32109</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5>Email Us</h5>
+                                <p>info@avvaiiacademy.com / admissions@avvaiiacademy.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h5>Office Hours</h5>
+                                <p>Monday - Saturday: 9:00 AM - 8:00 PM<br>Sunday: 10:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                    <div class="contact-form">
+                        <h3 class="mb-4">Send Us a Message</h3>
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Your Name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Your Email" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="tel" class="form-control" placeholder="Your Phone">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option value="" selected disabled>Interested Course</option>
+                                            <option value="tnpsc">TNPSC Preparation</option>
+                                            <option value="si">SI Exam Preparation</option>
+                                            <option value="weekend">Weekend Batch</option>
+                                            <option value="online">Online Program</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="row mt-5">
+        <div class="col-12" data-aos="zoom-in" data-aos-delay="300">
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.6048911992934!2d78.59137947481054!3d11.142775689029197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bababb7cb2a1a65%3A0xf5cb34626ada1e84!2savvaiiasacademy!5e0!3m2!1sen!2sin!4v1745129598409!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <a href="#" class="footer-logo">Avvai IAS Academy</a>
+                    <p>Established in 2010, Avvai IAS Academy has been the premier institute for civil services examination preparation in Tamil Nadu with a track record of consistent results.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-5 mb-md-0">
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#courses">Courses</a></li>
+                            <li><a href="#test-series">Test Series</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-5 mb-md-0">
+                    <div class="footer-links">
+                        <h4>Our Courses</h4>
+                        <ul>
+                            <li><a href="#">TNPSC Group 1</a></li>
+                            <li><a href="#">TNPSC Group 2 & 2A</a></li>
+                            <li><a href="#">TNPSC Group 4</a></li>
+                            <li><a href="#">SI Exam Preparation</a></li>
+                            <li><a href="#">Weekend Batch</a></li>
+                            <li><a href="#">Online Program</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="footer-links">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Study Materials</a></li>
+                            <li><a href="#">Previous Year Papers</a></li>
+                            <li><a href="#">Current Affairs</a></li>
+                            <li><a href="#">Success Stories</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Avvai IAS Academy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease'
+        });
+        
+        // Navbar scroll behavior
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+            
+            // Back to top button
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.classList.add('active');
+            } else {
+                backToTop.classList.remove('active');
+            }
+        });
+        
+        // Back to top functionality
+        document.querySelector('.back-to-top').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Counter animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        
+        const counterObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = +counter.getAttribute('data-target');
+                    let count = 0;
+                    
+                    const updateCount = () => {
+                        const increment = target / speed;
+                        if (count < target) {
+                            count += increment;
+                            counter.innerText = Math.ceil(count);
+                            setTimeout(updateCount, 1);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    
+                    updateCount();
+                    observer.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        counters.forEach(counter => {
+            counterObserver.observe(counter);
+        });
+        
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message. We will get back to you soon!');
+            this.reset();
+        });
+    </script>
+    <!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
